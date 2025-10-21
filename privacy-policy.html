@@ -100,6 +100,14 @@
             border-radius: 4px;
         }
 
+        .highlight {
+            background-color: #D1FAE5;
+            border-left: 4px solid #10B981;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
         footer {
             text-align: center;
             padding: 30px 0;
@@ -141,7 +149,7 @@
         <header>
             <div class="app-name">Mi Iglesia</div>
             <h1>Política de Privacidad</h1>
-            <p class="last-updated">Última actualización: 16 de octubre de 2025</p>
+            <p class="last-updated">Última actualización: 20 de octubre de 2025</p>
         </header>
 
         <div class="content">
@@ -167,7 +175,7 @@
                     <li>Nombre completo</li>
                     <li>Dirección de correo electrónico</li>
                     <li>Número de teléfono (opcional)</li>
-                    <li>Información de autenticación (contraseña encriptada o datos de Google OAuth)</li>
+                    <li>Información de autenticación (contraseña encriptada, Google OAuth, o Apple Sign In)</li>
                 </ul>
 
                 <h3>2.2 Información de la Iglesia</h3>
@@ -185,6 +193,7 @@
                     <li>Fotografía (opcional)</li>
                     <li>Fecha de nacimiento</li>
                     <li>Género</li>
+                    <li>Estado civil</li>
                     <li>Información de contacto (teléfono, email, dirección)</li>
                     <li>Ministerios asociados</li>
                     <li>Notas adicionales</li>
@@ -225,6 +234,27 @@
             </section>
 
             <section>
+                <h2>3.1 Tracking y Publicidad</h2>
+                <div class="highlight">
+                    <p>
+                        <strong>Mi Iglesia NO realiza tracking de usuarios para fines publicitarios.</strong>
+                    </p>
+                    <p>
+                        Los datos que recopilamos se utilizan exclusivamente para:
+                    </p>
+                    <ul>
+                        <li><strong>Funcionalidad de la aplicación:</strong> Proporcionar los servicios de gestión de iglesia</li>
+                        <li><strong>Análisis interno:</strong> Mejorar nuestros servicios mediante análisis de uso agregado y anónimo</li>
+                        <li><strong>Seguridad:</strong> Prevención de fraude y protección de su cuenta</li>
+                    </ul>
+                    <p>
+                        <strong>NO compartimos</strong> sus datos con redes publicitarias, brokers de datos,
+                        o terceros para fines de marketing sin su consentimiento explícito.
+                    </p>
+                </div>
+            </section>
+
+            <section>
                 <h2>4. Compartir Información</h2>
                 <p>
                     <strong>No vendemos, alquilamos ni compartimos su información personal con terceros para sus propios
@@ -242,6 +272,7 @@
                 <ul>
                     <li><strong>Supabase:</strong> Alojamiento de base de datos y autenticación</li>
                     <li><strong>Google:</strong> Servicios de autenticación OAuth (si elige iniciar sesión con Google)</li>
+                    <li><strong>Apple:</strong> Servicios de autenticación Sign in with Apple (si elige iniciar sesión con Apple)</li>
                 </ul>
                 <p>Estos proveedores están obligados contractualmente a proteger su información y solo pueden usarla para
                    proporcionar servicios en nuestro nombre.</p>
@@ -271,15 +302,38 @@
             </section>
 
             <section>
-                <h2>6. Retención de Datos</h2>
+                <h2>6. Retención y Eliminación de Datos</h2>
                 <p>
                     Conservamos su información personal mientras su cuenta esté activa o según sea necesario para
-                    proporcionar servicios. Puede solicitar la eliminación de su cuenta y datos asociados en cualquier
-                    momento contactándonos.
+                    proporcionar servicios.
+                </p>
+
+                <h3>6.1 Eliminación de Cuenta</h3>
+                <p>
+                    <strong>Puede eliminar su cuenta en cualquier momento directamente desde la aplicación</strong>
+                    navegando a: <strong>Más → Cuenta → Eliminar Cuenta</strong>.
                 </p>
                 <p>
-                    Después de eliminar su cuenta, conservaremos cierta información según sea necesario para cumplir
-                    con obligaciones legales, resolver disputas y hacer cumplir nuestros acuerdos.
+                    <strong>La eliminación es permanente e inmediata.</strong> Al eliminar su cuenta, se eliminarán todos sus datos personales,
+                    incluyendo:
+                </p>
+                <ul>
+                    <li>Información de perfil (nombre, email, teléfono)</li>
+                    <li>Datos de membresía</li>
+                    <li>Credenciales de autenticación (password, Google OAuth, Apple Sign In)</li>
+                    <li>Registros de usuario asociados</li>
+                </ul>
+                <p>
+                    También puede contactar nuestro soporte en
+                    <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a>
+                    si necesita asistencia con la eliminación de su cuenta.
+                </p>
+
+                <h3>6.2 Retención Post-Eliminación</h3>
+                <p>
+                    Después de eliminar su cuenta, podemos conservar cierta información no personal de forma anónima
+                    según sea necesario para cumplir con obligaciones legales, resolver disputas, prevenir fraude,
+                    o hacer cumplir nuestros acuerdos.
                 </p>
             </section>
 
@@ -289,12 +343,12 @@
                 <ul>
                     <li><strong>Acceder:</strong> Solicitar una copia de la información personal que tenemos sobre usted</li>
                     <li><strong>Corregir:</strong> Actualizar o corregir información inexacta o incompleta</li>
-                    <li><strong>Eliminar:</strong> Solicitar la eliminación de su información personal</li>
+                    <li><strong>Eliminar:</strong> Eliminar su cuenta y datos directamente desde la app (Más → Cuenta → Eliminar Cuenta)</li>
                     <li><strong>Exportar:</strong> Solicitar una copia de sus datos en formato portable</li>
                     <li><strong>Objetar:</strong> Oponerse al procesamiento de su información personal</li>
                     <li><strong>Retirar consentimiento:</strong> Retirar su consentimiento en cualquier momento</li>
                 </ul>
-                <p>Para ejercer estos derechos, contáctenos en <a href="mailto:mikael.burgos@proton.me">mikael.burgos@proton.me</a></p>
+                <p>Para ejercer estos derechos o solicitar asistencia, contáctenos en <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
             </section>
 
             <section>
@@ -362,7 +416,7 @@
                 <div class="contact">
                     <p>Si tiene preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o nuestras
                        prácticas de privacidad, contáctenos:</p>
-                    <p><strong>Email:</strong> <a href="mailto:mikael.burgos@proton.me">mikael.burgos@proton.me</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
                     <p><strong>Desarrollador:</strong> Mikael Burgos</p>
                     <p>Responderemos a su solicitud dentro de un plazo razonable.</p>
                 </div>
