@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Mi Iglesia</title>
+    <title id="page-title">Privacy Policy - My Church</title>
     <style>
         * {
             margin: 0;
@@ -14,40 +14,88 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: #2C3E50;
+            background-color: #F8F5F0;
+        }
+
+        .language-selector {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #4A9B8E;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 8px rgba(74, 155, 142, 0.2);
+        }
+
+        .language-selector span {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .language-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .language-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            border: 2px solid transparent;
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .language-btn.active {
+            background-color: #FFFFFF;
+            color: #4A9B8E;
+            border-color: #FFFFFF;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
         }
 
         header {
             text-align: center;
             padding: 40px 0 30px;
-            border-bottom: 3px solid #6B46C1;
+            border-bottom: 3px solid #4A9B8E;
         }
 
         h1 {
-            color: #6B46C1;
-            font-size: 2.5em;
+            color: #4A9B8E;
+            font-size: 32px;
             margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .app-name {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 5px;
+            font-size: 18px;
+            color: #6B7B8C;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .last-updated {
-            color: #999;
-            font-size: 0.9em;
-            margin-top: 10px;
+            color: #9CA3AF;
+            font-size: 14px;
+            margin-top: 12px;
         }
 
         .content {
@@ -55,387 +103,762 @@
         }
 
         h2 {
-            color: #6B46C1;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #E9D5FF;
+            color: #4A9B8E;
+            font-size: 24px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #7EBFB3;
+            font-weight: 700;
         }
 
         h3 {
-            color: #553C9A;
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            color: #3A7D72;
+            font-size: 20px;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             text-align: justify;
+            line-height: 1.75;
         }
 
         ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
+            margin-left: 28px;
+            margin-bottom: 16px;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            line-height: 1.75;
         }
 
         .important {
-            background-color: #FEF3C7;
-            border-left: 4px solid #F59E0B;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background-color: #FEF3E0;
+            border-left: 4px solid #D4A574;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 6px;
         }
 
         .contact {
-            background-color: #DBEAFE;
-            border-left: 4px solid #3B82F6;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background-color: #E3F5F2;
+            border-left: 4px solid #4A9B8E;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 6px;
         }
 
         .highlight {
-            background-color: #D1FAE5;
-            border-left: 4px solid #10B981;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
+            background-color: #E3F5F2;
+            border-left: 4px solid #48A376;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 6px;
         }
 
         footer {
             text-align: center;
-            padding: 30px 0;
-            border-top: 1px solid #E5E7EB;
-            color: #6B7280;
-            font-size: 0.9em;
+            padding: 32px 0;
+            border-top: 2px solid #E8E5DD;
+            color: #6B7B8C;
+            font-size: 14px;
+        }
+
+        footer p {
+            text-align: center;
         }
 
         a {
-            color: #6B46C1;
+            color: #4A9B8E;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         a:hover {
+            color: #3A7D72;
             text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 16px;
             }
 
             h1 {
-                font-size: 2em;
+                font-size: 28px;
             }
 
             h2 {
-                font-size: 1.5em;
+                font-size: 22px;
             }
 
             h3 {
-                font-size: 1.2em;
+                font-size: 18px;
+            }
+
+            .language-selector {
+                padding: 10px 16px;
+            }
+
+            .language-selector span {
+                font-size: 13px;
+            }
+
+            .language-btn {
+                padding: 5px 12px;
+                font-size: 13px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <span id="lang-label">Language:</span>
+        <div class="language-buttons">
+            <button class="language-btn" onclick="setLanguage('en')" id="btn-en">English</button>
+            <button class="language-btn" onclick="setLanguage('es')" id="btn-es">Español</button>
+        </div>
+    </div>
+
     <div class="container">
-        <header>
-            <div class="app-name">Mi Iglesia</div>
-            <h1>Política de Privacidad</h1>
-            <p class="last-updated">Última actualización: 20 de octubre de 2025</p>
-        </header>
+        <!-- English Version -->
+        <div id="content-en" class="hidden">
+            <header>
+                <div class="app-name">My Church</div>
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last updated: October 20, 2025</p>
+            </header>
 
-        <div class="content">
-            <section>
-                <h2>1. Introducción</h2>
-                <p>
-                    Bienvenido a Mi Iglesia ("nosotros", "nuestro" o "la aplicación"). Nos comprometemos a proteger su privacidad
-                    y la información personal de los miembros de su iglesia. Esta Política de Privacidad explica cómo recopilamos,
-                    usamos, compartimos y protegemos su información cuando utiliza nuestra aplicación móvil.
-                </p>
-                <p>
-                    Al usar Mi Iglesia, usted acepta las prácticas descritas en esta política. Si no está de acuerdo con
-                    esta política, por favor no utilice la aplicación.
-                </p>
-            </section>
-
-            <section>
-                <h2>2. Información que Recopilamos</h2>
-
-                <h3>2.1 Información de Cuenta</h3>
-                <p>Cuando se registra en Mi Iglesia, recopilamos:</p>
-                <ul>
-                    <li>Nombre completo</li>
-                    <li>Dirección de correo electrónico</li>
-                    <li>Número de teléfono (opcional)</li>
-                    <li>Información de autenticación (contraseña encriptada, Google OAuth, o Apple Sign In)</li>
-                </ul>
-
-                <h3>2.2 Información de la Iglesia</h3>
-                <ul>
-                    <li>Nombre de la iglesia</li>
-                    <li>Dirección de la iglesia</li>
-                    <li>Código único de iglesia (generado automáticamente)</li>
-                    <li>Información de líderes y colaboradores</li>
-                </ul>
-
-                <h3>2.3 Información de Miembros</h3>
-                <p>La información que usted ingresa sobre los miembros de su iglesia incluye:</p>
-                <ul>
-                    <li>Nombre completo</li>
-                    <li>Fotografía (opcional)</li>
-                    <li>Fecha de nacimiento</li>
-                    <li>Género</li>
-                    <li>Estado civil</li>
-                    <li>Información de contacto (teléfono, email, dirección)</li>
-                    <li>Ministerios asociados</li>
-                    <li>Notas adicionales</li>
-                </ul>
-
-                <h3>2.4 Información de Eventos y Asistencia</h3>
-                <ul>
-                    <li>Detalles de eventos (título, fecha, hora, ubicación, tipo)</li>
-                    <li>Registros de asistencia de miembros</li>
-                    <li>Estadísticas de asistencia</li>
-                    <li>Ministerios asociados a eventos</li>
-                </ul>
-
-                <h3>2.5 Información Técnica</h3>
-                <p>Podemos recopilar automáticamente:</p>
-                <ul>
-                    <li>Tipo de dispositivo y sistema operativo</li>
-                    <li>Dirección IP</li>
-                    <li>Información de uso de la aplicación</li>
-                    <li>Datos de registro de errores</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>3. Cómo Utilizamos su Información</h2>
-                <p>Utilizamos la información recopilada para:</p>
-                <ul>
-                    <li>Proporcionar y mantener la funcionalidad de la aplicación</li>
-                    <li>Gestionar cuentas de usuario y autenticación</li>
-                    <li>Permitir la gestión de miembros, eventos y asistencia</li>
-                    <li>Generar reportes y estadísticas de asistencia</li>
-                    <li>Facilitar la colaboración entre líderes de iglesia</li>
-                    <li>Enviar notificaciones importantes sobre su cuenta</li>
-                    <li>Mejorar la aplicación y resolver problemas técnicos</li>
-                    <li>Proteger contra el uso fraudulento o no autorizado</li>
-                    <li>Cumplir con obligaciones legales</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>3.1 Tracking y Publicidad</h2>
-                <div class="highlight">
+            <div class="content">
+                <section>
+                    <h2>1. Introduction</h2>
                     <p>
-                        <strong>Mi Iglesia NO realiza tracking de usuarios para fines publicitarios.</strong>
+                        Welcome to My Church ("we", "our" or "the application"). We are committed to protecting your privacy
+                        and the personal information of your church members. This Privacy Policy explains how we collect,
+                        use, share and protect your information when you use our mobile application.
                     </p>
                     <p>
-                        Los datos que recopilamos se utilizan exclusivamente para:
+                        By using My Church, you accept the practices described in this policy. If you do not agree with
+                        this policy, please do not use the application.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>2. Information We Collect</h2>
+
+                    <h3>2.1 Account Information</h3>
+                    <p>When you register with My Church, we collect:</p>
+                    <ul>
+                        <li>Full name</li>
+                        <li>Email address</li>
+                        <li>Phone number (optional)</li>
+                        <li>Authentication information (encrypted password, Google OAuth, or Apple Sign In)</li>
+                    </ul>
+
+                    <h3>2.2 Church Information</h3>
+                    <ul>
+                        <li>Church name</li>
+                        <li>Church address</li>
+                        <li>Unique church code (automatically generated)</li>
+                        <li>Information about leaders and collaborators</li>
+                    </ul>
+
+                    <h3>2.3 Member Information</h3>
+                    <p>Information you enter about your church members includes:</p>
+                    <ul>
+                        <li>Full name</li>
+                        <li>Photo (optional)</li>
+                        <li>Date of birth</li>
+                        <li>Gender</li>
+                        <li>Marital status</li>
+                        <li>Contact information (phone, email, address)</li>
+                        <li>Associated ministries</li>
+                        <li>Additional notes</li>
+                    </ul>
+
+                    <h3>2.4 Event and Attendance Information</h3>
+                    <ul>
+                        <li>Event details (title, date, time, location, type)</li>
+                        <li>Member attendance records</li>
+                        <li>Attendance statistics</li>
+                        <li>Ministries associated with events</li>
+                    </ul>
+
+                    <h3>2.5 Technical Information</h3>
+                    <p>We may automatically collect:</p>
+                    <ul>
+                        <li>Device type and operating system</li>
+                        <li>IP address</li>
+                        <li>Application usage information</li>
+                        <li>Error log data</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We use the collected information to:</p>
+                    <ul>
+                        <li>Provide and maintain application functionality</li>
+                        <li>Manage user accounts and authentication</li>
+                        <li>Enable management of members, events and attendance</li>
+                        <li>Generate attendance reports and statistics</li>
+                        <li>Facilitate collaboration between church leaders</li>
+                        <li>Send important notifications about your account</li>
+                        <li>Improve the application and resolve technical issues</li>
+                        <li>Protect against fraudulent or unauthorized use</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3.1 Tracking and Advertising</h2>
+                    <div class="highlight">
+                        <p>
+                            <strong>My Church does NOT track users for advertising purposes.</strong>
+                        </p>
+                        <p>
+                            The data we collect is used exclusively for:
+                        </p>
+                        <ul>
+                            <li><strong>Application functionality:</strong> Providing church management services</li>
+                            <li><strong>Internal analysis:</strong> Improving our services through aggregated and anonymous usage analysis</li>
+                            <li><strong>Security:</strong> Fraud prevention and account protection</li>
+                        </ul>
+                        <p>
+                            <strong>We DO NOT share</strong> your data with advertising networks, data brokers,
+                            or third parties for marketing purposes without your explicit consent.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>4. Sharing Information</h2>
+                    <p>
+                        <strong>We do not sell, rent or share your personal information with third parties for their own
+                        marketing purposes.</strong>
+                    </p>
+
+                    <h3>4.1 Within Your Church</h3>
+                    <p>
+                        The information you enter is shared with other authorized leaders of your church according to the permissions
+                        you configure. Each church has access only to its own information.
+                    </p>
+
+                    <h3>4.2 Service Providers</h3>
+                    <p>We share information with trusted service providers who help us operate the application:</p>
+                    <ul>
+                        <li><strong>Supabase:</strong> Database hosting and authentication</li>
+                        <li><strong>Google:</strong> OAuth authentication services (if you choose to sign in with Google)</li>
+                        <li><strong>Apple:</strong> Sign in with Apple authentication services (if you choose to sign in with Apple)</li>
+                    </ul>
+                    <p>These providers are contractually obligated to protect your information and may only use it to
+                       provide services on our behalf.</p>
+
+                    <h3>4.3 Legal Requirements</h3>
+                    <p>We may disclose information if required by law or in response to valid legal processes.</p>
+                </section>
+
+                <section>
+                    <h2>5. Data Security</h2>
+                    <p>We implement security measures to protect your information:</p>
+                    <ul>
+                        <li>Data encryption in transit (HTTPS/SSL)</li>
+                        <li>Password encryption</li>
+                        <li>Secure authentication with email verification</li>
+                        <li>Role-based access control</li>
+                        <li>Data isolation by church</li>
+                        <li>Regular backups</li>
+                        <li>Continuous security monitoring</li>
+                    </ul>
+
+                    <div class="important">
+                        <strong>Important:</strong> Although we implement robust security measures, no method of
+                        Internet transmission or electronic storage is 100% secure. We cannot guarantee the
+                        absolute security of your information.
+                    </div>
+                </section>
+
+                <section>
+                    <h2>6. Data Retention and Deletion</h2>
+                    <p>
+                        We retain your personal information while your account is active or as necessary to
+                        provide services.
+                    </p>
+
+                    <h3>6.1 Account Deletion</h3>
+                    <p>
+                        <strong>You can delete your account at any time directly from the application</strong>
+                        by navigating to: <strong>More → Account → Delete Account</strong>.
+                    </p>
+                    <p>
+                        <strong>Deletion is permanent and immediate.</strong> When you delete your account, all your personal data will be deleted,
+                        including:
                     </p>
                     <ul>
-                        <li><strong>Funcionalidad de la aplicación:</strong> Proporcionar los servicios de gestión de iglesia</li>
-                        <li><strong>Análisis interno:</strong> Mejorar nuestros servicios mediante análisis de uso agregado y anónimo</li>
-                        <li><strong>Seguridad:</strong> Prevención de fraude y protección de su cuenta</li>
+                        <li>Profile information (name, email, phone)</li>
+                        <li>Membership data</li>
+                        <li>Authentication credentials (password, Google OAuth, Apple Sign In)</li>
+                        <li>Associated user records</li>
                     </ul>
                     <p>
-                        <strong>NO compartimos</strong> sus datos con redes publicitarias, brokers de datos,
-                        o terceros para fines de marketing sin su consentimiento explícito.
+                        You can also contact our support at
+                        <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a>
+                        if you need assistance with deleting your account.
                     </p>
-                </div>
-            </section>
 
-            <section>
-                <h2>4. Compartir Información</h2>
-                <p>
-                    <strong>No vendemos, alquilamos ni compartimos su información personal con terceros para sus propios
-                    fines de marketing.</strong>
-                </p>
+                    <h3>6.2 Post-Deletion Retention</h3>
+                    <p>
+                        After deleting your account, we may retain certain non-personal information anonymously
+                        as necessary to comply with legal obligations, resolve disputes, prevent fraud,
+                        or enforce our agreements.
+                    </p>
+                </section>
 
-                <h3>4.1 Dentro de su Iglesia</h3>
-                <p>
-                    La información que ingresa es compartida con otros líderes autorizados de su iglesia según los permisos
-                    que usted configure. Cada iglesia tiene acceso únicamente a su propia información.
-                </p>
+                <section>
+                    <h2>7. Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of the personal information we have about you</li>
+                        <li><strong>Correct:</strong> Update or correct inaccurate or incomplete information</li>
+                        <li><strong>Delete:</strong> Delete your account and data directly from the app (More → Account → Delete Account)</li>
+                        <li><strong>Export:</strong> Request a copy of your data in portable format</li>
+                        <li><strong>Object:</strong> Object to the processing of your personal information</li>
+                        <li><strong>Withdraw consent:</strong> Withdraw your consent at any time</li>
+                    </ul>
+                    <p>To exercise these rights or request assistance, contact us at <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
+                </section>
 
-                <h3>4.2 Proveedores de Servicios</h3>
-                <p>Compartimos información con proveedores de servicios confiables que nos ayudan a operar la aplicación:</p>
-                <ul>
-                    <li><strong>Supabase:</strong> Alojamiento de base de datos y autenticación</li>
-                    <li><strong>Google:</strong> Servicios de autenticación OAuth (si elige iniciar sesión con Google)</li>
-                    <li><strong>Apple:</strong> Servicios de autenticación Sign in with Apple (si elige iniciar sesión con Apple)</li>
-                </ul>
-                <p>Estos proveedores están obligados contractualmente a proteger su información y solo pueden usarla para
-                   proporcionar servicios en nuestro nombre.</p>
+                <section>
+                    <h2>8. Children's Privacy</h2>
+                    <p>
+                        My Church is not designed for children under 13 years of age. We do not intentionally collect
+                        personal information from children under 13 without parental consent.
+                    </p>
+                    <p>
+                        While the application allows recording information of minor members as part of
+                        church management, this functionality is intended only for use by authorized adults
+                        (church leaders) acting on behalf of the congregation.
+                    </p>
+                    <p>
+                        If we discover that we have collected personal information from a child under 13 without parental
+                        consent, we will take steps to delete that information as soon as possible.
+                    </p>
+                </section>
 
-                <h3>4.3 Requisitos Legales</h3>
-                <p>Podemos divulgar información si es requerido por ley o en respuesta a procesos legales válidos.</p>
-            </section>
+                <section>
+                    <h2>9. International Data Transfers</h2>
+                    <p>
+                        Your information may be transferred and processed on servers located outside your country of residence.
+                        We take steps to ensure that your information receives an adequate level of protection wherever
+                        it is processed.
+                    </p>
+                </section>
 
-            <section>
-                <h2>5. Seguridad de los Datos</h2>
-                <p>Implementamos medidas de seguridad para proteger su información:</p>
-                <ul>
-                    <li>Encriptación de datos en tránsito (HTTPS/SSL)</li>
-                    <li>Encriptación de contraseñas</li>
-                    <li>Autenticación segura con verificación de email</li>
-                    <li>Control de acceso basado en roles</li>
-                    <li>Aislamiento de datos por iglesia</li>
-                    <li>Copias de seguridad regulares</li>
-                    <li>Monitoreo de seguridad continuo</li>
-                </ul>
+                <section>
+                    <h2>10. Cookies and Similar Technologies</h2>
+                    <p>
+                        My Church uses technologies such as session tokens to maintain your active session and provide
+                        a personalized experience. These technologies are essential for the application to function.
+                    </p>
+                </section>
 
-                <div class="important">
-                    <strong>Importante:</strong> Aunque implementamos medidas de seguridad robustas, ningún método de
-                    transmisión por Internet o almacenamiento electrónico es 100% seguro. No podemos garantizar la
-                    seguridad absoluta de su información.
-                </div>
-            </section>
+                <section>
+                    <h2>11. Changes to this Privacy Policy</h2>
+                    <p>
+                        We may update this Privacy Policy occasionally. We will notify you of significant changes
+                        by posting the new policy in the application and updating the "Last updated" date
+                        at the top of this policy.
+                    </p>
+                    <p>
+                        We recommend reviewing this policy periodically to stay informed about how we protect
+                        your information.
+                    </p>
+                </section>
 
-            <section>
-                <h2>6. Retención y Eliminación de Datos</h2>
-                <p>
-                    Conservamos su información personal mientras su cuenta esté activa o según sea necesario para
-                    proporcionar servicios.
-                </p>
+                <section>
+                    <h2>12. User Responsibilities</h2>
+                    <p>As a user of My Church, you are responsible for:</p>
+                    <ul>
+                        <li>Obtaining appropriate consent before entering personal information of church members</li>
+                        <li>Ensuring that the entered information is accurate and up to date</li>
+                        <li>Maintaining the confidentiality of your login credentials</li>
+                        <li>Using the application responsibly and ethically</li>
+                        <li>Respecting the privacy of your church members</li>
+                        <li>Complying with local data protection laws</li>
+                    </ul>
+                </section>
 
-                <h3>6.1 Eliminación de Cuenta</h3>
-                <p>
-                    <strong>Puede eliminar su cuenta en cualquier momento directamente desde la aplicación</strong>
-                    navegando a: <strong>Más → Cuenta → Eliminar Cuenta</strong>.
-                </p>
-                <p>
-                    <strong>La eliminación es permanente e inmediata.</strong> Al eliminar su cuenta, se eliminarán todos sus datos personales,
-                    incluyendo:
-                </p>
-                <ul>
-                    <li>Información de perfil (nombre, email, teléfono)</li>
-                    <li>Datos de membresía</li>
-                    <li>Credenciales de autenticación (password, Google OAuth, Apple Sign In)</li>
-                    <li>Registros de usuario asociados</li>
-                </ul>
-                <p>
-                    También puede contactar nuestro soporte en
-                    <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a>
-                    si necesita asistencia con la eliminación de su cuenta.
-                </p>
+                <section>
+                    <h2>13. Contact</h2>
+                    <div class="contact">
+                        <p>If you have questions, concerns or requests about this Privacy Policy or our
+                           privacy practices, contact us:</p>
+                        <p><strong>Email:</strong> <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
+                        <p><strong>Developer:</strong> Mikael Burgos</p>
+                        <p>We will respond to your request within a reasonable timeframe.</p>
+                    </div>
+                </section>
 
-                <h3>6.2 Retención Post-Eliminación</h3>
-                <p>
-                    Después de eliminar su cuenta, podemos conservar cierta información no personal de forma anónima
-                    según sea necesario para cumplir con obligaciones legales, resolver disputas, prevenir fraude,
-                    o hacer cumplir nuestros acuerdos.
-                </p>
-            </section>
+                <section>
+                    <h2>14. Consent</h2>
+                    <p>
+                        By using My Church, you acknowledge that you have read and understood this Privacy Policy and
+                        accept the collection, use and disclosure of your information as described in this document.
+                    </p>
+                </section>
+            </div>
 
-            <section>
-                <h2>7. Sus Derechos</h2>
-                <p>Usted tiene derecho a:</p>
-                <ul>
-                    <li><strong>Acceder:</strong> Solicitar una copia de la información personal que tenemos sobre usted</li>
-                    <li><strong>Corregir:</strong> Actualizar o corregir información inexacta o incompleta</li>
-                    <li><strong>Eliminar:</strong> Eliminar su cuenta y datos directamente desde la app (Más → Cuenta → Eliminar Cuenta)</li>
-                    <li><strong>Exportar:</strong> Solicitar una copia de sus datos en formato portable</li>
-                    <li><strong>Objetar:</strong> Oponerse al procesamiento de su información personal</li>
-                    <li><strong>Retirar consentimiento:</strong> Retirar su consentimiento en cualquier momento</li>
-                </ul>
-                <p>Para ejercer estos derechos o solicitar asistencia, contáctenos en <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
-            </section>
-
-            <section>
-                <h2>8. Privacidad de Menores</h2>
-                <p>
-                    Mi Iglesia no está diseñada para menores de 13 años. No recopilamos intencionalmente información
-                    personal de menores de 13 años sin el consentimiento de los padres.
-                </p>
-                <p>
-                    Si bien la aplicación permite registrar información de miembros menores de edad como parte de la
-                    gestión de la iglesia, esta funcionalidad está destinada únicamente para uso por adultos autorizados
-                    (líderes de iglesia) actuando en representación de la congregación.
-                </p>
-                <p>
-                    Si descubrimos que hemos recopilado información personal de un menor de 13 años sin consentimiento
-                    parental, tomaremos medidas para eliminar esa información lo antes posible.
-                </p>
-            </section>
-
-            <section>
-                <h2>9. Transferencias Internacionales de Datos</h2>
-                <p>
-                    Su información puede ser transferida y procesada en servidores ubicados fuera de su país de residencia.
-                    Tomamos medidas para garantizar que su información reciba un nivel adecuado de protección dondequiera
-                    que se procese.
-                </p>
-            </section>
-
-            <section>
-                <h2>10. Cookies y Tecnologías Similares</h2>
-                <p>
-                    Mi Iglesia utiliza tecnologías como tokens de sesión para mantener su sesión activa y proporcionar
-                    una experiencia personalizada. Estas tecnologías son esenciales para el funcionamiento de la aplicación.
-                </p>
-            </section>
-
-            <section>
-                <h2>11. Cambios a esta Política de Privacidad</h2>
-                <p>
-                    Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cambios
-                    significativos publicando la nueva política en la aplicación y actualizando la fecha de "Última
-                    actualización" en la parte superior de esta política.
-                </p>
-                <p>
-                    Le recomendamos revisar esta política periódicamente para estar informado sobre cómo protegemos
-                    su información.
-                </p>
-            </section>
-
-            <section>
-                <h2>12. Responsabilidades del Usuario</h2>
-                <p>Como usuario de Mi Iglesia, usted es responsable de:</p>
-                <ul>
-                    <li>Obtener el consentimiento apropiado antes de ingresar información personal de miembros de la iglesia</li>
-                    <li>Asegurar que la información ingresada sea precisa y esté actualizada</li>
-                    <li>Mantener la confidencialidad de sus credenciales de inicio de sesión</li>
-                    <li>Usar la aplicación de manera responsable y ética</li>
-                    <li>Respetar la privacidad de los miembros de su iglesia</li>
-                    <li>Cumplir con las leyes locales de protección de datos</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>13. Contacto</h2>
-                <div class="contact">
-                    <p>Si tiene preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o nuestras
-                       prácticas de privacidad, contáctenos:</p>
-                    <p><strong>Email:</strong> <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
-                    <p><strong>Desarrollador:</strong> Mikael Burgos</p>
-                    <p>Responderemos a su solicitud dentro de un plazo razonable.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>14. Consentimiento</h2>
-                <p>
-                    Al usar Mi Iglesia, usted reconoce que ha leído y comprendido esta Política de Privacidad y
-                    acepta la recopilación, uso y divulgación de su información como se describe en este documento.
-                </p>
-            </section>
+            <footer>
+                <p>&copy; 2025 My Church. All rights reserved.</p>
+                <p>This application is designed to help churches manage their attendance and members effectively and securely.</p>
+            </footer>
         </div>
 
-        <footer>
-            <p>&copy; 2025 Mi Iglesia. Todos los derechos reservados.</p>
-            <p>Esta aplicación está diseñada para ayudar a iglesias a gestionar su asistencia y miembros de manera efectiva y segura.</p>
-        </footer>
+        <!-- Spanish Version -->
+        <div id="content-es" class="hidden">
+            <header>
+                <div class="app-name">Mi Iglesia</div>
+                <h1>Política de Privacidad</h1>
+                <p class="last-updated">Última actualización: 20 de octubre de 2025</p>
+            </header>
+
+            <div class="content">
+                <section>
+                    <h2>1. Introducción</h2>
+                    <p>
+                        Bienvenido a Mi Iglesia ("nosotros", "nuestro" o "la aplicación"). Nos comprometemos a proteger su privacidad
+                        y la información personal de los miembros de su iglesia. Esta Política de Privacidad explica cómo recopilamos,
+                        usamos, compartimos y protegemos su información cuando utiliza nuestra aplicación móvil.
+                    </p>
+                    <p>
+                        Al usar Mi Iglesia, usted acepta las prácticas descritas en esta política. Si no está de acuerdo con
+                        esta política, por favor no utilice la aplicación.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>2. Información que Recopilamos</h2>
+
+                    <h3>2.1 Información de Cuenta</h3>
+                    <p>Cuando se registra en Mi Iglesia, recopilamos:</p>
+                    <ul>
+                        <li>Nombre completo</li>
+                        <li>Dirección de correo electrónico</li>
+                        <li>Número de teléfono (opcional)</li>
+                        <li>Información de autenticación (contraseña encriptada, Google OAuth, o Apple Sign In)</li>
+                    </ul>
+
+                    <h3>2.2 Información de la Iglesia</h3>
+                    <ul>
+                        <li>Nombre de la iglesia</li>
+                        <li>Dirección de la iglesia</li>
+                        <li>Código único de iglesia (generado automáticamente)</li>
+                        <li>Información de líderes y colaboradores</li>
+                    </ul>
+
+                    <h3>2.3 Información de Miembros</h3>
+                    <p>La información que usted ingresa sobre los miembros de su iglesia incluye:</p>
+                    <ul>
+                        <li>Nombre completo</li>
+                        <li>Fotografía (opcional)</li>
+                        <li>Fecha de nacimiento</li>
+                        <li>Género</li>
+                        <li>Estado civil</li>
+                        <li>Información de contacto (teléfono, email, dirección)</li>
+                        <li>Ministerios asociados</li>
+                        <li>Notas adicionales</li>
+                    </ul>
+
+                    <h3>2.4 Información de Eventos y Asistencia</h3>
+                    <ul>
+                        <li>Detalles de eventos (título, fecha, hora, ubicación, tipo)</li>
+                        <li>Registros de asistencia de miembros</li>
+                        <li>Estadísticas de asistencia</li>
+                        <li>Ministerios asociados a eventos</li>
+                    </ul>
+
+                    <h3>2.5 Información Técnica</h3>
+                    <p>Podemos recopilar automáticamente:</p>
+                    <ul>
+                        <li>Tipo de dispositivo y sistema operativo</li>
+                        <li>Dirección IP</li>
+                        <li>Información de uso de la aplicación</li>
+                        <li>Datos de registro de errores</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Cómo Utilizamos su Información</h2>
+                    <p>Utilizamos la información recopilada para:</p>
+                    <ul>
+                        <li>Proporcionar y mantener la funcionalidad de la aplicación</li>
+                        <li>Gestionar cuentas de usuario y autenticación</li>
+                        <li>Permitir la gestión de miembros, eventos y asistencia</li>
+                        <li>Generar reportes y estadísticas de asistencia</li>
+                        <li>Facilitar la colaboración entre líderes de iglesia</li>
+                        <li>Enviar notificaciones importantes sobre su cuenta</li>
+                        <li>Mejorar la aplicación y resolver problemas técnicos</li>
+                        <li>Proteger contra el uso fraudulento o no autorizado</li>
+                        <li>Cumplir con obligaciones legales</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3.1 Tracking y Publicidad</h2>
+                    <div class="highlight">
+                        <p>
+                            <strong>Mi Iglesia NO realiza tracking de usuarios para fines publicitarios.</strong>
+                        </p>
+                        <p>
+                            Los datos que recopilamos se utilizan exclusivamente para:
+                        </p>
+                        <ul>
+                            <li><strong>Funcionalidad de la aplicación:</strong> Proporcionar los servicios de gestión de iglesia</li>
+                            <li><strong>Análisis interno:</strong> Mejorar nuestros servicios mediante análisis de uso agregado y anónimo</li>
+                            <li><strong>Seguridad:</strong> Prevención de fraude y protección de su cuenta</li>
+                        </ul>
+                        <p>
+                            <strong>NO compartimos</strong> sus datos con redes publicitarias, brokers de datos,
+                            o terceros para fines de marketing sin su consentimiento explícito.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>4. Compartir Información</h2>
+                    <p>
+                        <strong>No vendemos, alquilamos ni compartimos su información personal con terceros para sus propios
+                        fines de marketing.</strong>
+                    </p>
+
+                    <h3>4.1 Dentro de su Iglesia</h3>
+                    <p>
+                        La información que ingresa es compartida con otros líderes autorizados de su iglesia según los permisos
+                        que usted configure. Cada iglesia tiene acceso únicamente a su propia información.
+                    </p>
+
+                    <h3>4.2 Proveedores de Servicios</h3>
+                    <p>Compartimos información con proveedores de servicios confiables que nos ayudan a operar la aplicación:</p>
+                    <ul>
+                        <li><strong>Supabase:</strong> Alojamiento de base de datos y autenticación</li>
+                        <li><strong>Google:</strong> Servicios de autenticación OAuth (si elige iniciar sesión con Google)</li>
+                        <li><strong>Apple:</strong> Servicios de autenticación Sign in with Apple (si elige iniciar sesión con Apple)</li>
+                    </ul>
+                    <p>Estos proveedores están obligados contractualmente a proteger su información y solo pueden usarla para
+                       proporcionar servicios en nuestro nombre.</p>
+
+                    <h3>4.3 Requisitos Legales</h3>
+                    <p>Podemos divulgar información si es requerido por ley o en respuesta a procesos legales válidos.</p>
+                </section>
+
+                <section>
+                    <h2>5. Seguridad de los Datos</h2>
+                    <p>Implementamos medidas de seguridad para proteger su información:</p>
+                    <ul>
+                        <li>Encriptación de datos en tránsito (HTTPS/SSL)</li>
+                        <li>Encriptación de contraseñas</li>
+                        <li>Autenticación segura con verificación de email</li>
+                        <li>Control de acceso basado en roles</li>
+                        <li>Aislamiento de datos por iglesia</li>
+                        <li>Copias de seguridad regulares</li>
+                        <li>Monitoreo de seguridad continuo</li>
+                    </ul>
+
+                    <div class="important">
+                        <strong>Importante:</strong> Aunque implementamos medidas de seguridad robustas, ningún método de
+                        transmisión por Internet o almacenamiento electrónico es 100% seguro. No podemos garantizar la
+                        seguridad absoluta de su información.
+                    </div>
+                </section>
+
+                <section>
+                    <h2>6. Retención y Eliminación de Datos</h2>
+                    <p>
+                        Conservamos su información personal mientras su cuenta esté activa o según sea necesario para
+                        proporcionar servicios.
+                    </p>
+
+                    <h3>6.1 Eliminación de Cuenta</h3>
+                    <p>
+                        <strong>Puede eliminar su cuenta en cualquier momento directamente desde la aplicación</strong>
+                        navegando a: <strong>Más → Cuenta → Eliminar Cuenta</strong>.
+                    </p>
+                    <p>
+                        <strong>La eliminación es permanente e inmediata.</strong> Al eliminar su cuenta, se eliminarán todos sus datos personales,
+                        incluyendo:
+                    </p>
+                    <ul>
+                        <li>Información de perfil (nombre, email, teléfono)</li>
+                        <li>Datos de membresía</li>
+                        <li>Credenciales de autenticación (password, Google OAuth, Apple Sign In)</li>
+                        <li>Registros de usuario asociados</li>
+                    </ul>
+                    <p>
+                        También puede contactar nuestro soporte en
+                        <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a>
+                        si necesita asistencia con la eliminación de su cuenta.
+                    </p>
+
+                    <h3>6.2 Retención Post-Eliminación</h3>
+                    <p>
+                        Después de eliminar su cuenta, podemos conservar cierta información no personal de forma anónima
+                        según sea necesario para cumplir con obligaciones legales, resolver disputas, prevenir fraude,
+                        o hacer cumplir nuestros acuerdos.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>7. Sus Derechos</h2>
+                    <p>Usted tiene derecho a:</p>
+                    <ul>
+                        <li><strong>Acceder:</strong> Solicitar una copia de la información personal que tenemos sobre usted</li>
+                        <li><strong>Corregir:</strong> Actualizar o corregir información inexacta o incompleta</li>
+                        <li><strong>Eliminar:</strong> Eliminar su cuenta y datos directamente desde la app (Más → Cuenta → Eliminar Cuenta)</li>
+                        <li><strong>Exportar:</strong> Solicitar una copia de sus datos en formato portable</li>
+                        <li><strong>Objetar:</strong> Oponerse al procesamiento de su información personal</li>
+                        <li><strong>Retirar consentimiento:</strong> Retirar su consentimiento en cualquier momento</li>
+                    </ul>
+                    <p>Para ejercer estos derechos o solicitar asistencia, contáctenos en <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
+                </section>
+
+                <section>
+                    <h2>8. Privacidad de Menores</h2>
+                    <p>
+                        Mi Iglesia no está diseñada para menores de 13 años. No recopilamos intencionalmente información
+                        personal de menores de 13 años sin el consentimiento de los padres.
+                    </p>
+                    <p>
+                        Si bien la aplicación permite registrar información de miembros menores de edad como parte de la
+                        gestión de la iglesia, esta funcionalidad está destinada únicamente para uso por adultos autorizados
+                        (líderes de iglesia) actuando en representación de la congregación.
+                    </p>
+                    <p>
+                        Si descubrimos que hemos recopilado información personal de un menor de 13 años sin consentimiento
+                        parental, tomaremos medidas para eliminar esa información lo antes posible.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>9. Transferencias Internacionales de Datos</h2>
+                    <p>
+                        Su información puede ser transferida y procesada en servidores ubicados fuera de su país de residencia.
+                        Tomamos medidas para garantizar que su información reciba un nivel adecuado de protección dondequiera
+                        que se procese.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>10. Cookies y Tecnologías Similares</h2>
+                    <p>
+                        Mi Iglesia utiliza tecnologías como tokens de sesión para mantener su sesión activa y proporcionar
+                        una experiencia personalizada. Estas tecnologías son esenciales para el funcionamiento de la aplicación.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>11. Cambios a esta Política de Privacidad</h2>
+                    <p>
+                        Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cambios
+                        significativos publicando la nueva política en la aplicación y actualizando la fecha de "Última
+                        actualización" en la parte superior de esta política.
+                    </p>
+                    <p>
+                        Le recomendamos revisar esta política periódicamente para estar informado sobre cómo protegemos
+                        su información.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>12. Responsabilidades del Usuario</h2>
+                    <p>Como usuario de Mi Iglesia, usted es responsable de:</p>
+                    <ul>
+                        <li>Obtener el consentimiento apropiado antes de ingresar información personal de miembros de la iglesia</li>
+                        <li>Asegurar que la información ingresada sea precisa y esté actualizada</li>
+                        <li>Mantener la confidencialidad de sus credenciales de inicio de sesión</li>
+                        <li>Usar la aplicación de manera responsable y ética</li>
+                        <li>Respetar la privacidad de los miembros de su iglesia</li>
+                        <li>Cumplir con las leyes locales de protección de datos</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>13. Contacto</h2>
+                    <div class="contact">
+                        <p>Si tiene preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o nuestras
+                           prácticas de privacidad, contáctenos:</p>
+                        <p><strong>Email:</strong> <a href="mailto:Mikael.Burgos@proton.me">Mikael.Burgos@proton.me</a></p>
+                        <p><strong>Desarrollador:</strong> Mikael Burgos</p>
+                        <p>Responderemos a su solicitud dentro de un plazo razonable.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>14. Consentimiento</h2>
+                    <p>
+                        Al usar Mi Iglesia, usted reconoce que ha leído y comprendido esta Política de Privacidad y
+                        acepta la recopilación, uso y divulgación de su información como se describe en este documento.
+                    </p>
+                </section>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Mi Iglesia. Todos los derechos reservados.</p>
+                <p>Esta aplicación está diseñada para ayudar a iglesias a gestionar su asistencia y miembros de manera efectiva y segura.</p>
+            </footer>
+        </div>
     </div>
+
+    <script>
+        // Language detection and management
+        const translations = {
+            en: {
+                pageTitle: 'Privacy Policy - My Church',
+                langLabel: 'Language:'
+            },
+            es: {
+                pageTitle: 'Política de Privacidad - Mi Iglesia',
+                langLabel: 'Idioma:'
+            }
+        };
+
+        function detectLanguage() {
+            const savedLang = localStorage.getItem('preferred-language');
+            if (savedLang) {
+                return savedLang;
+            }
+
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+        }
+
+        function setLanguage(lang) {
+            localStorage.setItem('preferred-language', lang);
+
+            document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('content-es').classList.toggle('hidden', lang !== 'es');
+
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+
+            document.getElementById('page-title').textContent = translations[lang].pageTitle;
+            document.getElementById('lang-label').textContent = translations[lang].langLabel;
+
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectedLang = detectLanguage();
+            setLanguage(detectedLang);
+        });
+    </script>
 </body>
 </html>
-
